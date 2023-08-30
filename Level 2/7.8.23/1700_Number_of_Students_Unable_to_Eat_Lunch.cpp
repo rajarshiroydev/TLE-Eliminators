@@ -10,7 +10,7 @@ int main()
         {
             int size = students.size();
             queue<int> q;
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++   )
             {
                 q.push(students[i]);
             }

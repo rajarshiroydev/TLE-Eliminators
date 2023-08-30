@@ -1,22 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define endl '\n'
+
 int main() {
     int t; cin >> t;
     while(t--) {
         int n; cin >> n;
         int a[n];
+
         for(int i = 0; i < n; i++) {
             cin >> a[i];
         }
-        int hash[101] = {0};
+
+        map<int, int> map;
+
         for(int i = 0; i < n; i++) {
-            hash[a[i]]++;
+            map[a[i]]++;
         }
-        for(int i = 0; i < 101; i++) {
-            cout << hash[i] << ' ';
+        int target;
+        for(int i = 0; i < n; i++) {
+            if(map[a[i]] == 1) {
+                target = a[i];
+                break;
+            }
         }
-        cout << endl;
+        for(int i = 0; i < n; i++) {
+            if(a[i] == target) {
+                cout << i + 1 << endl;
+                break;
+            }
+        }
     }
-    return 0;
 }
