@@ -6,11 +6,11 @@ int main()
     class Solution
     {
     public:
-        int countStudents(vector<int> &students, vector<int> &sandwiches)
+        int countStudents(vector<int>& students, vector<int>& sandwiches)
         {
             int size = students.size();
             queue<int> q;
-            for (int i = 0; i < size; i++   )
+            for (int i = 0; i < size; i++)
             {
                 q.push(students[i]);
             }
@@ -39,5 +39,4 @@ int main()
             return 0;
         }
     };
-    return 0;
 }
